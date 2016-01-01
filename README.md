@@ -25,11 +25,12 @@ decision-tree.py accepts parameters passed via the command line. The possible pa
 #### Examples
 #####Example 1
 ```
-python decision-tree.py btrain.csv -v bvalidate.csv -p -t btest.csv
+python decision_tree.py data/iris_training.arff -t data/iris_test.arff
 ```
-This command runs decision-tree.py with btrain.csv as the training set, bvalidate.csv as the validation set, btest.csv as the test set, and pruning enabled. The classifier is not specified so it defaults to the last column in the training set. No datatypes file is specified so it defaults to datatypes.csv. Printing is not enabled.
+This command runs decision_tree.py with iris_training.csv as the training set and iris_test.csv as the test set. The classifier is not specified so it defaults to the last column in the training set. Printing is not enabled.
 #####Example 2
 ```
-python decision-tree.py btrain.csv winner -d datatypes.csv -v bvalidate.csv -p -s
+python decision_tree.py data/iris_training.arff -t data/iris_test.arff -s
 ```
-This command runs decision-tree.py with btrain.csv as the training set, 'winner' as the classifier, datatypes.csv as the datatypes file, bvalidate.csv as the validation file, pruning enabled, and printing enabled. Testing is not enabled for this run
+This command runs decision_tree.py with iris_training.csv as the training set and iris_test.csv as the test set. The classifier is not specified so it defaults to the last column in the training set. Printing is enabled.
+```
